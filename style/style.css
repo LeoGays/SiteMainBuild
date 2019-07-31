@@ -23,9 +23,19 @@
     margin: 0;
 }
 
+.final-text {
+    font-family:Arial;
+    font-size: 60px;
+    padding: 5px;
+    margin: 0;
+}
+
 .test {
     display: none;
 }
+
+
+
 
 button {
     position: fixed;
