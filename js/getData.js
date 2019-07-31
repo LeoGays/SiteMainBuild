@@ -1,5 +1,22 @@
+
+
+function printed_el_text( el ){
+    var text = el.innerHTML,
+        i = 0,
+        __print = function (){
+            i++;
+            if( i <= text.length ){
+                el.innerHTML = text.substr(0, i);
+                setTimeout( __print, 35 );
+            }
+        };
+    __print();
+};
+
 document.getElementById("next").style.display = "none";
 document.getElementById("final").style.display = "none";
+
+
 var array = {
     q1: undefined,
     q2: undefined,
@@ -14,6 +31,7 @@ start.addEventListener("click", function () {
     document.getElementById("intro").style.display = "none";
     document.getElementById("next").style.display = "block";
     document.getElementById("test1").style.display = "block";
+    printed_el_text(document.getElementById("text1"));
     count++;
 })
 
@@ -30,8 +48,11 @@ next.addEventListener("click", function () {
                 array["q"+ count] = rad[i].value;
             }
         }
+
         count++;
+        console.log(count);
         document.getElementById("test" + count).style.display = "block";
+        printed_el_text(document.getElementById("text" + count));
     } else {
         document.getElementById("next").style.display = "none";
         document.getElementById("test4").style.display = "none";
@@ -42,8 +63,13 @@ next.addEventListener("click", function () {
                 array["q"+ count] = rad[i].value;
             }
         }
-
+        printed_el_text(document.getElementById("text"));
         document.getElementById("final").style.display = "block";
     }
 
 })
+
+
+
+
+
