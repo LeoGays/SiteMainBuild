@@ -26,6 +26,8 @@ var array = {
 
 var count = 0;
 
+printed_el_text(document.getElementById("textMain"));
+
 
 start.addEventListener("click", function () {
     document.getElementById("intro").style.display = "none";
