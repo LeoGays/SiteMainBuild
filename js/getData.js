@@ -38,7 +38,7 @@ start.addEventListener("click", function () {
 next.addEventListener("click", function () {
 
 
-    if (count != 4) {
+    if (count != 5) {
         document.getElementById("next").style.display = "block";
         document.getElementById("test" + count).style.display = "none";
 
@@ -55,7 +55,7 @@ next.addEventListener("click", function () {
         printed_el_text(document.getElementById("text" + count));
     } else {
         document.getElementById("next").style.display = "none";
-        document.getElementById("test4").style.display = "none";
+        document.getElementById("test5").style.display = "none";
 
         var rad = document.getElementsByName("q" + count);
         for (let i = 0; i < rad.length; i++) {
